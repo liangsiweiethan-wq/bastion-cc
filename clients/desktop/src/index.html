@@ -7,107 +7,93 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>BastionCC 棱堡 · 桌面工作台</title>
   <style>
-    :root {
-      --bg-canvas-light: #f1f5f9;
-      --bg-canvas-dark: #0b1120;
-      --bg-panel-light: #ffffff;
-      --bg-panel-dark: #111827;
-      --bg-subtle-light: #f8fafc;
-      --bg-subtle-dark: #1e293b;
-      --bg-hover-light: #e2e8f0;
-      --bg-hover-dark: #334155;
-      --text-main-light: #0f172a;
-      --text-main-dark: #f1f5f9;
-      --text-muted-light: #475569;
-      --text-muted-dark: #94a3b8;
-      --border-light: #dbe2ea;
-      --border-dark: #283548;
-      --brand-light: #1d4ed8;
-      --brand-dark: #60a5fa;
-      --brand-text-light: #ffffff;
-      --brand-text-dark: #082f49;
-      --brand-soft-light: #e0ecff;
-      --brand-soft-dark: #172554;
-      --emerald-light: #0f766e;
-      --emerald-dark: #2dd4bf;
-      --emerald-text-light: #ffffff;
-      --emerald-text-dark: #042f2e;
-      --danger-light: #b91c1c;
-      --danger-dark: #f87171;
-      --danger-text-light: #ffffff;
-      --danger-text-dark: #450a0a;
-      --amber-bg-light: #fef3c7;
-      --amber-bg-dark: #451a03;
-      --amber-border-light: #f59e0b;
-      --amber-border-dark: #d97706;
-      --scroll-track-light: #e2e8f0;
-      --scroll-track-dark: #0f172a;
-      --scroll-thumb-light: #64748b;
-      --scroll-thumb-dark: #64748b;
-
-      --bg-canvas: var(--bg-canvas-light);
-      --bg-panel: var(--bg-panel-light);
-      --bg-subtle: var(--bg-subtle-light);
-      --bg-hover: var(--bg-hover-light);
-      --text-main: var(--text-main-light);
-      --text-muted: var(--text-muted-light);
-      --border: var(--border-light);
-      --brand: var(--brand-light);
-      --brand-text: var(--brand-text-light);
-      --brand-soft: var(--brand-soft-light);
-      --emerald: var(--emerald-light);
-      --emerald-text: var(--emerald-text-light);
-      --danger: var(--danger-light);
-      --danger-text: var(--danger-text-light);
-      --amber-bg: var(--amber-bg-light);
-      --amber-border: var(--amber-border-light);
-      --scrollbar-track: var(--scroll-track-light);
-      --scrollbar-thumb: var(--scroll-thumb-light);
-
-      @media (prefers-color-scheme: dark) {
-        --bg-canvas: var(--bg-canvas-dark);
-        --bg-panel: var(--bg-panel-dark);
-        --bg-subtle: var(--bg-subtle-dark);
-        --bg-hover: var(--bg-hover-dark);
-        --text-main: var(--text-main-dark);
-        --text-muted: var(--text-muted-dark);
-        --border: var(--border-dark);
-        --brand: var(--brand-dark);
-        --brand-text: var(--brand-text-dark);
-        --brand-soft: var(--brand-soft-dark);
-        --emerald: var(--emerald-dark);
-        --emerald-text: var(--emerald-text-dark);
-        --danger: var(--danger-dark);
-        --danger-text: var(--danger-text-dark);
-        --amber-bg: var(--amber-bg-dark);
-        --amber-border: var(--amber-border-dark);
-        --scrollbar-track: var(--scroll-track-dark);
-        --scrollbar-thumb: var(--scroll-thumb-dark);
-      }
-
-      @supports (color: light-dark(white, black)) {
-        --bg-canvas: light-dark(var(--bg-canvas-light), var(--bg-canvas-dark));
-        --bg-panel: light-dark(var(--bg-panel-light), var(--bg-panel-dark));
-        --bg-subtle: light-dark(var(--bg-subtle-light), var(--bg-subtle-dark));
-        --bg-hover: light-dark(var(--bg-hover-light), var(--bg-hover-dark));
-        --text-main: light-dark(var(--text-main-light), var(--text-main-dark));
-        --text-muted: light-dark(var(--text-muted-light), var(--text-muted-dark));
-        --border: light-dark(var(--border-light), var(--border-dark));
-        --brand: light-dark(var(--brand-light), var(--brand-dark));
-        --brand-text: light-dark(var(--brand-text-light), var(--brand-text-dark));
-        --brand-soft: light-dark(var(--brand-soft-light), var(--brand-soft-dark));
-        --emerald: light-dark(var(--emerald-light), var(--emerald-dark));
-        --emerald-text: light-dark(var(--emerald-text-light), var(--emerald-text-dark));
-        --danger: light-dark(var(--danger-light), var(--danger-dark));
-        --danger-text: light-dark(var(--danger-text-light), var(--danger-text-dark));
-        --amber-bg: light-dark(var(--amber-bg-light), var(--amber-bg-dark));
-        --amber-border: light-dark(var(--amber-border-light), var(--amber-border-dark));
-        --scrollbar-track: light-dark(var(--scroll-track-light), var(--scroll-track-dark));
-        --scrollbar-thumb: light-dark(var(--scroll-thumb-light), var(--scroll-thumb-dark));
-      }
-
-      color-scheme: light dark;
+    :root,
+    [data-theme="light"] {
+      --bg-canvas: #faf9f5;
+      --bg-chrome: #f3f1ea;
+      --bg-panel: #ffffff;
+      --bg-subtle: #f5f3ec;
+      --bg-recessed: #efece3;
+      --bg-hover: #e8e4d8;
+      --text-main: #1f1e1d;
+      --text-secondary: #5c5953;
+      --text-muted: #736f68;
+      --border: #e5e1d8;
+      --border-strong: #dbd6ca;
+      --brand: #c05a38;
+      --brand-fill: #be5432;
+      --brand-hover: #aa4d2e;
+      --brand-text: #ffffff;
+      --brand-soft: #f9efea;
+      --brand-soft-border: #e6c6b8;
+      --focus-ring: #c05a38;
+      --shadow: 0 1px 2px rgba(28, 25, 21, 0.04);
+      --ok-ink: #1e6b42;
+      --ok-bg: #e9f5ee;
+      --ok-border: #bfe0cc;
+      --ok-solid: #1e6b42;
+      --warn-ink: #965812;
+      --warn-bg: #fdf3e2;
+      --warn-border: #ecd0a1;
+      --danger-ink: #b42318;
+      --danger-bg: #fdeceb;
+      --danger-border: #f2bcb7;
+      --danger: #b42318;
+      --danger-hover: #9b1c14;
+      --danger-text: #ffffff;
+      --emerald: var(--ok-ink);
+      --emerald-text: #ffffff;
+      --amber-bg: var(--warn-bg);
+      --amber-border: var(--warn-border);
+      --scrollbar-track: #efece3;
+      --scrollbar-thumb: #c9c3b6;
+      color-scheme: light;
       font: 14px/1.5 system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
+      color: var(--text-main);
+      background: var(--bg-canvas);
+      scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+    }
+
+    [data-theme="dark"] {
+      --bg-canvas: #1e1e1c;
+      --bg-chrome: #181816;
+      --bg-panel: #2a2926;
+      --bg-subtle: #232220;
+      --bg-recessed: #232220;
+      --bg-hover: #34322c;
+      --text-main: #ecebe6;
+      --text-secondary: #b5b2a8;
+      --text-muted: #9a978e;
+      --border: #3a3833;
+      --border-strong: #4a4740;
+      --brand: #d97757;
+      --brand-fill: #be5432;
+      --brand-hover: #d97757;
+      --brand-text: #ffffff;
+      --brand-soft: rgba(217, 119, 87, 0.16);
+      --brand-soft-border: #d97757;
+      --focus-ring: #d97757;
+      --shadow: 0 1px 2px rgba(0, 0, 0, 0.28);
+      --ok-ink: #b7e0c8;
+      --ok-bg: #1a3326;
+      --ok-border: #2e5c42;
+      --ok-solid: #1e6b42;
+      --warn-ink: #f0d3a4;
+      --warn-bg: #3a2c18;
+      --warn-border: #6e5228;
+      --danger-ink: #f5c2bc;
+      --danger-bg: #3c221f;
+      --danger-border: #7a3e38;
+      --danger: #b42318;
+      --danger-hover: #9b1c14;
+      --danger-text: #ffffff;
+      --emerald: var(--ok-ink);
+      --emerald-text: #ffffff;
+      --amber-bg: var(--warn-bg);
+      --amber-border: var(--warn-border);
+      --scrollbar-track: #181816;
+      --scrollbar-thumb: #5c5952;
+      color-scheme: dark;
       color: var(--text-main);
       background: var(--bg-canvas);
       scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
@@ -115,6 +101,7 @@
 
     html {
       accent-color: var(--brand);
+      height: 100%;
     }
 
     @supports not (scrollbar-color: auto) {
@@ -137,6 +124,8 @@
       white-space: nowrap;
       border: 0;
     }
+    .sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+    .icon { width: 14px; height: 14px; flex: none; display: block; }
 
     body {
       margin: 0;
@@ -145,6 +134,7 @@
       flex-direction: column;
       background: var(--bg-canvas);
       color: var(--text-main);
+      overflow: hidden;
     }
 
     header.topbar {
@@ -153,14 +143,14 @@
       justify-content: space-between;
       align-items: center;
       gap: .65rem 1rem;
-      padding: .75rem 1.15rem;
-      background: var(--bg-panel);
+      padding: .7rem 1.15rem;
+      background: var(--bg-canvas);
       border-bottom: 1px solid var(--border);
     }
 
-    .brand { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
+    .brand { display: flex; flex-wrap: wrap; align-items: center; gap: .55rem; min-width: 0; }
     .brand-title { font-weight: 700; font-size: 1rem; letter-spacing: -.01em; }
-    .metrics-pill {
+    .metrics-pill, .status-pill {
       font-size: .78rem;
       color: var(--text-muted);
       background: var(--bg-subtle);
@@ -168,19 +158,37 @@
       border-radius: 999px;
       padding: .2rem .7rem;
       font-variant-numeric: tabular-nums;
+      white-space: nowrap;
     }
+    .status-pill { display: inline-flex; align-items: center; gap: .4rem; font-weight: 650; }
+    .status-pill::before {
+      content: "";
+      width: .45rem;
+      height: .45rem;
+      border-radius: 50%;
+      background: currentColor;
+    }
+    .status-pill[data-state="online"] {
+      color: var(--ok-ink);
+      background: var(--ok-bg);
+      border-color: var(--ok-border);
+    }
+    .status-pill[data-state="offline"] { color: var(--text-muted); }
 
-    .top-actions { display: flex; flex-wrap: wrap; gap: .45rem; align-items: center; }
+    .top-actions { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; justify-content: flex-end; }
 
-    .connect-drawer { width: 100%; border-top: 1px dashed var(--border); padding-top: .5rem; }
+    .connect-drawer { width: 100%; border-top: 1px solid var(--border); padding-top: .55rem; }
     .connect-drawer summary {
       cursor: pointer;
       font-size: .82rem;
       color: var(--text-muted);
       user-select: none;
+      width: fit-content;
     }
     .connect-drawer form { margin-top: .45rem; }
-    #pair-code-input { font-family: ui-monospace, monospace; font-size: 1rem; letter-spacing: .25em; width: 11ch; text-align: center; }
+    #base-url-input, #auth-token-input { flex: 1; min-width: 10rem; }
+    #pair-code-input { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 1rem; letter-spacing: .25em; width: 11ch; text-align: center; }
+    .totp-input { width: 6.5rem; }
 
     main.shell {
       flex: 1;
@@ -205,7 +213,12 @@
       flex-direction: column;
       gap: .65rem;
       min-height: 0;
+      box-shadow: var(--shadow);
     }
+    .sidebar { background: var(--bg-chrome); box-shadow: none; }
+    .theme-icon-moon { display: none; }
+    [data-theme="dark"] .theme-icon-sun { display: none; }
+    [data-theme="dark"] .theme-icon-moon { display: block; }
 
     .row { display: flex; flex-wrap: wrap; gap: .45rem; align-items: center; }
     .col { display: grid; gap: .45rem; }
@@ -213,32 +226,55 @@
     input, textarea, select, button {
       font: inherit;
       padding: .42rem .65rem;
-      border: 1px solid var(--border);
+      border: 1px solid var(--border-strong);
       border-radius: 8px;
-      background: var(--bg-subtle);
+      background: var(--bg-recessed);
       color: var(--text-main);
-      transition: border-color .15s ease, background-color .15s ease;
     }
+    select { background: var(--bg-recessed); color: var(--text-main); }
 
-    input:focus, textarea:focus, select:focus {
-      outline: 2px solid var(--brand);
-      outline-offset: -1px;
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible,
+    select:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid var(--focus-ring);
+      outline-offset: 2px;
     }
 
     button {
       cursor: pointer;
-      background: var(--brand);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .35rem;
+      background: var(--brand-fill);
       color: var(--brand-text);
-      border-color: var(--brand);
+      border-color: var(--brand-fill);
+      font-weight: 600;
+      min-height: 1.9rem;
+    }
+    button:hover:not(:disabled) { background: var(--brand-hover); border-color: var(--brand-hover); }
+    button.secondary { background: var(--bg-panel); color: var(--text-main); border-color: var(--border-strong); font-weight: 500; }
+    button.secondary:hover:not(:disabled) { background: var(--bg-hover); border-color: var(--border-strong); }
+    button.active-toggle { background: var(--ok-solid); border-color: var(--ok-solid); color: #ffffff; }
+    button.danger { background: var(--danger); border-color: var(--danger); color: var(--danger-text); }
+    button.danger:hover:not(:disabled) { background: var(--danger-hover); border-color: var(--danger-hover); }
+    button.danger-quiet {
+      background: transparent;
+      color: var(--text-muted);
+      border-color: transparent;
       font-weight: 500;
     }
-    button:hover:not(:disabled) { filter: brightness(1.06); }
-    button.secondary { background: var(--bg-subtle); color: var(--text-main); border-color: var(--border); }
-    button.secondary:hover:not(:disabled) { background: var(--bg-hover); }
-    button.active-toggle { background: var(--emerald); border-color: var(--emerald); color: var(--emerald-text); }
-    button.danger { background: var(--danger); border-color: var(--danger); color: var(--danger-text); }
+    button.danger-quiet:hover:not(:disabled),
+    button.danger-quiet:focus-visible:not(:disabled) {
+      color: var(--danger);
+      background: var(--bg-subtle);
+      border-color: var(--border);
+    }
     button:disabled { opacity: .45; cursor: not-allowed; }
-    button.compact { padding: .3rem .55rem; font-size: .84rem; }
+    button.compact { padding: .28rem .5rem; font-size: .8rem; min-height: 1.7rem; }
+    button.icon-btn { padding: .28rem; min-width: 1.75rem; }
 
     .create-card {
       background: var(--bg-subtle);
@@ -249,16 +285,29 @@
 
     .project-group { display: grid; gap: .28rem; margin-bottom: .6rem; }
     .project-title {
-      font-size: .76rem;
-      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: .35rem;
+      font-size: .75rem;
+      font-weight: 650;
       color: var(--text-muted);
-      padding: .22rem .45rem;
-      background: var(--bg-subtle);
-      border-radius: 6px;
+      padding: .12rem .2rem;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
     }
+    .search-field { position: relative; }
+    .search-field .icon {
+      position: absolute;
+      left: .55rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+    .search-field input { width: 100%; padding-left: 1.85rem; }
+    .grow { flex: 1; min-width: 0; }
+    .sidebar-scroll { overflow: auto; flex: 1; min-height: 0; }
     ul { list-style: none; padding: 0; margin: 0; display: grid; gap: .28rem; }
     .session-btn {
       width: 100%;
@@ -268,14 +317,28 @@
       align-items: center;
       gap: .4rem;
       padding: .45rem .6rem;
+      background: transparent;
+      color: var(--text-main);
+      border-color: transparent;
+      font-weight: 500;
     }
+    .session-btn:hover:not(:disabled) { background: var(--bg-subtle); border-color: var(--border); }
     .session-btn.selected {
       background: var(--brand-soft);
       border-color: var(--brand);
       color: var(--text-main);
-      font-weight: 600;
+      font-weight: 650;
     }
-    .session-badge { font-size: .74rem; color: var(--text-muted); white-space: nowrap; }
+    .session-btn span:first-child { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .session-badge { font-size: .72rem; color: var(--text-muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+    .session-badge[data-status="ready"],
+    .session-badge[data-status="completed"] { color: var(--ok-ink); background: var(--ok-bg); }
+    .session-badge[data-status="running"],
+    .session-badge[data-status="leased"] { color: var(--brand-fill); background: var(--brand-soft); }
+    .session-badge[data-status="queued"],
+    .session-badge[data-status="awaiting_approval"] { color: var(--warn-ink); background: var(--warn-bg); }
+    .session-badge[data-status="failed"],
+    .session-badge[data-status="cancelled"] { color: var(--danger-ink); background: var(--danger-bg); }
 
     .workspace-header {
       display: flex;
@@ -287,14 +350,48 @@
       border-bottom: 1px solid var(--border);
     }
 
-    .session-meta { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem; font-size: .9rem; }
-    .tag-chip {
+    .session-meta { display: grid; gap: .22rem; min-width: 0; }
+    .session-title-row, .session-meta-row { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem .45rem; min-width: 0; }
+    .session-title { font-size: 1rem; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .session-meta-row { color: var(--text-muted); font-size: .78rem; }
+    .run-meta { display: inline-flex; align-items: center; gap: .28rem; min-width: 0; }
+    .run-id {
+      font-family: ui-monospace, SFMono-Regular, monospace;
       font-size: .75rem;
+      font-weight: 600;
+      color: var(--text-main);
+      max-width: 14rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .tag-chip, .status-chip {
+      font-size: .72rem;
+      font-weight: 650;
       color: var(--text-muted);
       background: var(--bg-subtle);
       border: 1px solid var(--border);
-      padding: .12rem .5rem;
+      padding: .08rem .45rem;
       border-radius: 999px;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+    .status-chip[data-status="ready"],
+    .status-chip[data-status="completed"] { color: var(--ok-ink); background: var(--ok-bg); border-color: var(--ok-border); }
+    .status-chip[data-status="running"],
+    .status-chip[data-status="leased"] { color: var(--brand-fill); background: var(--brand-soft); border-color: var(--brand-soft-border); }
+    .status-chip[data-status="queued"],
+    .status-chip[data-status="awaiting_approval"] { color: var(--warn-ink); background: var(--warn-bg); border-color: var(--warn-border); }
+    .status-chip[data-status="failed"],
+    .status-chip[data-status="cancelled"],
+    .status-chip[data-status="unknown"] { color: var(--danger-ink); background: var(--danger-bg); border-color: var(--danger-border); }
+    [data-theme="dark"] .status-chip[data-status="running"],
+    [data-theme="dark"] .status-chip[data-status="leased"],
+    [data-theme="dark"] .session-badge[data-status="running"],
+    [data-theme="dark"] .session-badge[data-status="leased"] {
+      color: #d97757;
+      background: #2a2926;
+      border-color: #d97757;
     }
 
     .inline-edit {
@@ -327,7 +424,7 @@
       border: 1px solid var(--border);
       border-radius: 10px;
       padding: .85rem;
-      background: var(--bg-subtle);
+      background: var(--bg-recessed);
       display: flex;
       flex-direction: column;
       gap: .75rem;
@@ -355,7 +452,8 @@
     }
     .chunk.prompt {
       background: var(--brand-soft);
-      border-color: var(--brand);
+      border-color: var(--brand-soft-border);
+      color: var(--text-main);
       align-self: flex-end;
       max-width: 92%;
     }
@@ -363,7 +461,15 @@
       background: var(--bg-panel);
       align-self: stretch;
     }
-    .chunk-head { font-size: .74rem; font-weight: 600; color: var(--text-muted); }
+    .chunk-head {
+      display: flex;
+      justify-content: space-between;
+      gap: .6rem;
+      font-size: .72rem;
+      font-weight: 650;
+      color: var(--text-muted);
+    }
+    .chunk-time { font-weight: 550; font-variant-numeric: tabular-nums; white-space: nowrap; }
     .chunk-body { white-space: pre-wrap; word-break: break-word; line-height: 1.55; }
 
     .composer-card {
@@ -385,6 +491,20 @@
       background: var(--bg-panel);
     }
 
+    .composer-footer { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: .5rem .75rem; }
+    .run-options { flex: 1; min-width: min(100%, 16rem); }
+    .run-options summary {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      width: fit-content;
+      cursor: pointer;
+      color: var(--text-muted);
+      font-size: .8rem;
+      list-style: none;
+    }
+    .run-options summary::-webkit-details-marker { display: none; }
+    .composer-controls { padding-top: .45rem; }
     .composer-controls select {
       field-sizing: content;
       max-inline-size: 28ch;
@@ -392,76 +512,201 @@
       font-size: .84rem;
     }
     .composer-controls label { font-size: .8rem; color: var(--text-muted); display: inline-flex; align-items: center; gap: .3rem; }
+    .composer-actions { margin-left: auto; }
+    #start-run { min-width: 6.6rem; }
 
-    .notice { color: var(--emerald); font-size: .85rem; margin: 0; }
-    #error { color: var(--danger); margin: 0; white-space: pre-wrap; font-size: .85rem; }
+    .notice { color: var(--ok-ink); font-size: .85rem; margin: 0; }
+    .notice:empty, #error:empty {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+    #error { color: var(--danger-ink); margin: 0; white-space: pre-wrap; font-size: .85rem; }
+    dialog {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--bg-panel);
+      color: var(--text-main);
+      padding: 1.05rem 1.15rem 1rem;
+      width: min(28rem, calc(100vw - 2rem));
+      box-shadow: 0 16px 40px rgba(28, 25, 21, 0.16);
+    }
+    dialog::backdrop { background: rgba(28, 25, 21, 0.42); }
+    .confirm-form { display: grid; gap: .7rem; }
+    .confirm-form h3 { margin: 0; font-size: 1rem; }
+    .confirm-form p { margin: 0; color: var(--text-muted); }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+    @media (max-width: 860px) {
+      body { height: auto; min-height: 100vh; overflow: auto; }
+    }
   </style>
 </head>
 <body>
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-search" viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10.4 10.4 13.5 13.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 16 16"><path d="M13.2 8a5.2 5.2 0 1 1-1.4-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M11.6 2.4v2.7H8.9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 16 16"><path d="M8 3.2v9.6M3.2 8h9.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 16 16"><path d="M3.2 4.6h9.6M6.3 4.5V3.2h3.4v1.3M4.4 4.6l.6 8.1h6l.6-8.1" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-history" viewBox="0 0 16 16"><path d="M3.2 8a4.8 4.8 0 1 0 1.2-3.2M3 3.2v2.4h2.4M8 5.6V8.2l1.8 1.2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pencil" viewBox="0 0 16 16"><path d="M9.4 3.1 12.9 6.6 6.2 13.3H2.7V9.8z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+    <symbol id="i-branch" viewBox="0 0 16 16"><circle cx="4.2" cy="3.4" r="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="4.2" cy="12.6" r="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="11.8" cy="6.4" r="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M4.2 4.9v6.2M4.2 8.1c.2-1.5 2.1-1.7 6.1-1.7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="i-download" viewBox="0 0 16 16"><path d="M8 2.4v7M5.2 7.1 8 9.9l2.8-2.8M3.2 13.2h9.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 16 16"><rect x="5.6" y="5.6" width="7" height="7.2" rx="1.1" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10.4 5.6V3.7a1 1 0 0 0-1-1H3.6a1 1 0 0 0-1 1v5.8a1 1 0 0 0 1 1h2" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+    <symbol id="i-plug" viewBox="0 0 16 16"><path d="M6 2.2v3.1M10 2.2v3.1M4.4 5.3h7.2v2.2a3.6 3.6 0 0 1-7.2 0zM8 11.1v2.7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 16 16"><path d="M2.4 5.1V12.4h11.2V6.2H8.1L6.7 4.4H2.4v.7z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 16 16"><path d="M8.8 2 4.4 8.6h3.2L6.5 14 11.8 7.1H8.4z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></symbol>
+    <symbol id="i-runner" viewBox="0 0 16 16"><circle cx="10.2" cy="3.2" r="1.3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M4 13.2 6.6 8.8 9.2 10l1.6-2.2H13M6.4 8.6 4.2 6.4h2.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-device" viewBox="0 0 16 16"><rect x="5" y="2.2" width="6" height="11.6" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M7.2 12.4h1.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="i-key" viewBox="0 0 16 16"><circle cx="5.2" cy="8" r="2.4" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M7.4 8H13.2M11.2 8v1.8M13.2 8v1.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="i-sliders" viewBox="0 0 16 16"><path d="M2.8 4.4h10.4M2.8 8h10.4M2.8 11.6h10.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="6" cy="4.4" r="1.3" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="10.2" cy="8" r="1.3" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="7.2" cy="11.6" r="1.3" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 16 16"><circle cx="8" cy="8" r="2.3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.7v1.7M8 12.6v1.7M1.7 8h1.7M12.6 8h1.7M3.5 3.5l1.2 1.2M11.3 11.3l1.2 1.2M12.5 3.5l-1.2 1.2M4.7 11.3l-1.2 1.2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 16 16"><path d="M10.3 2.3A5.5 5.5 0 1 0 13.8 10 4.3 4.3 0 0 1 10.3 2.3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+  </svg>
   <header class="topbar">
     <div class="brand">
       <span class="brand-title">BastionCC · 棱堡</span>
-      <span id="metrics-pill" class="metrics-pill">📊 会话 0 · 轮次 0 · ~0 Tokens · 缓存命中 0%</span>
+      <span id="metrics-pill" class="metrics-pill">会话 0 · 轮次 0 · ~0 Tokens · 缓存命中 0%</span>
+      <span id="connection-status" class="status-pill" data-state="offline" role="status">未连接</span>
     </div>
     <div class="top-actions">
-      <button id="toggle-local-server" type="button" class="secondary compact">⚡ 一键本地服务</button>
-      <button id="toggle-local-runner" type="button" class="secondary compact">🏃 本机执行器</button>
-      <button id="pair-code-btn" type="button" class="secondary compact">📱 生成6位配对码</button>
-      <button id="oauth-login" type="button" class="secondary compact">🔐 Claude 隔离登录</button>
+      <button id="toggle-local-server" type="button" class="secondary compact">
+        <svg class="icon" aria-hidden="true"><use href="#i-bolt"></use></svg>
+        <span class="btn-label">一键本地服务</span>
+      </button>
+      <button id="toggle-local-runner" type="button" class="secondary compact">
+        <svg class="icon" aria-hidden="true"><use href="#i-runner"></use></svg>
+        <span class="btn-label">本机执行器</span>
+      </button>
+      <button id="pair-code-btn" type="button" class="secondary compact" aria-label="生成6位配对码">
+        <svg class="icon" aria-hidden="true"><use href="#i-device"></use></svg>
+        生成6位配对码
+      </button>
+      <button id="oauth-login" type="button" class="secondary compact" aria-label="Claude 隔离登录">
+        <svg class="icon" aria-hidden="true"><use href="#i-key"></use></svg>
+        Claude 隔离登录
+      </button>
+      <button id="theme-toggle" type="button" class="secondary compact" aria-label="切换深色主题" title="切换深色主题">
+        <svg class="icon theme-icon theme-icon-sun" aria-hidden="true"><use href="#i-sun"></use></svg>
+        <svg class="icon theme-icon theme-icon-moon" aria-hidden="true"><use href="#i-moon"></use></svg>
+        <span class="btn-label">浅色</span>
+      </button>
     </div>
-    <details id="connect-drawer" class="connect-drawer">
-      <summary>远程 VPS 连接设置（服务器地址 / 令牌 / 6位配对码）</summary>
+    <details id="connect-drawer" class="connect-drawer" open>
+      <summary>连接设置</summary>
       <form id="connect-form" class="row">
-        <input name="baseUrl" id="base-url-input" value="http://127.0.0.1:8787" placeholder="服务器地址 (如 http://127.0.0.1:8787)" style="flex:1;min-width:220px">
-        <input name="authToken" id="auth-token-input" type="password" autocomplete="off" placeholder="访问令牌 (本机可选)" style="flex:1;min-width:160px">
-        <input name="totp" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="TOTP" style="width:86px">
-        <button type="submit" class="compact">连接</button>
+        <label class="sr-only" for="base-url-input">服务器地址</label>
+        <input name="baseUrl" id="base-url-input" value="http://127.0.0.1:8787" placeholder="服务器地址 (如 http://127.0.0.1:8787)" spellcheck="false">
+        <label class="sr-only" for="auth-token-input">访问令牌</label>
+        <input name="authToken" id="auth-token-input" type="password" autocomplete="off" spellcheck="false" placeholder="访问令牌 (本机可选)">
+        <label class="sr-only" for="totp-input">TOTP</label>
+        <input id="totp-input" class="totp-input" name="totp" type="text" inputmode="numeric" autocomplete="one-time-code" spellcheck="false" maxlength="6" placeholder="TOTP">
+        <button type="submit" class="compact">
+          <svg class="icon" aria-hidden="true"><use href="#i-plug"></use></svg>
+          连接
+        </button>
       </form>
       <form id="pair-login-form" class="row">
-        <label for="pair-code-input" style="font-size:.8rem;color:var(--text-muted)">6位配对码登录</label>
-        <input id="pair-code-input" name="code" type="text" inputmode="numeric" autocomplete="one-time-code" pattern="\d{6}" maxlength="6" placeholder="000000" required>
+        <label for="pair-code-input">6位配对码登录</label>
+        <input id="pair-code-input" name="code" type="text" inputmode="numeric" autocomplete="one-time-code" spellcheck="false" pattern="\d{6}" maxlength="6" placeholder="000000" required>
         <button type="submit" class="secondary compact">兑换并连接</button>
       </form>
     </details>
   </header>
 
   <main class="shell">
-    <aside class="panel">
+    <aside class="panel sidebar">
       <div class="row" style="justify-content:space-between">
         <strong>项目与会话</strong>
-        <button id="reload-sessions" type="button" class="secondary compact">刷新</button>
-      </div>
-      <input id="session-search" type="search" placeholder="🔍 搜索会话 / 项目...">
-      <form id="create-session-form" class="col create-card">
         <div class="row">
-          <input name="project" id="project-input" placeholder="所属项目目录 (可选)" style="flex:1;min-width:0">
-          <button id="pick-folder" type="button" class="secondary compact">📁 选目录</button>
+          <button id="new-session-toggle" type="button" class="compact" aria-expanded="false" aria-controls="create-session-form">
+            <svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg>
+            新建
+          </button>
+          <button id="reload-sessions" type="button" class="secondary compact" aria-label="刷新会话列表">
+            <svg class="icon" aria-hidden="true"><use href="#i-refresh"></use></svg>
+            刷新
+          </button>
+        </div>
+      </div>
+      <div class="search-field">
+        <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+        <input id="session-search" type="search" placeholder="搜索会话 / 项目…" aria-label="搜索会话或项目" autocomplete="off">
+      </div>
+      <form id="create-session-form" class="col create-card" hidden>
+        <div class="row">
+          <label class="sr-only" for="project-input">所属项目目录</label>
+          <input name="project" id="project-input" class="grow" placeholder="所属项目目录 (可选)" autocomplete="off">
+          <button id="pick-folder" type="button" class="secondary compact" aria-label="选择项目目录">
+            <svg class="icon" aria-hidden="true"><use href="#i-folder"></use></svg>
+            选目录
+          </button>
         </div>
         <div class="row">
-          <input name="sessionId" id="new-session-input" placeholder="会话名 / ID (留空自动生成)" style="flex:1;min-width:0">
-          <button type="submit" class="compact">+ 新建</button>
+          <label class="sr-only" for="new-session-input">会话名</label>
+          <input name="sessionId" id="new-session-input" class="grow" placeholder="会话名 / ID (留空自动生成)" autocomplete="off">
+          <button type="submit" class="compact">创建</button>
         </div>
       </form>
-      <div id="session-groups" style="overflow-y:auto;flex:1"></div>
+      <div id="session-groups" class="sidebar-scroll"></div>
       <div class="row">
-        <button id="delete-session" type="button" class="danger compact" disabled>🗑️ 删除</button>
-        <button id="compact-sessions" type="button" class="secondary compact">🧹 压缩历史</button>
+        <button id="delete-session" type="button" class="danger-quiet compact" disabled aria-label="删除会话">
+          <svg class="icon" aria-hidden="true"><use href="#i-trash"></use></svg>
+          删除
+        </button>
+        <button id="compact-sessions" type="button" class="secondary compact" aria-label="压缩历史">
+          <svg class="icon" aria-hidden="true"><use href="#i-history"></use></svg>
+          压缩历史
+        </button>
       </div>
     </aside>
 
     <section class="panel">
       <div class="workspace-header">
         <div class="session-meta">
-          <strong id="active-session">未选择会话</strong>
-          <span id="active-project-tag" class="tag-chip" hidden></span>
-          <span id="active-claude-tag" class="tag-chip" hidden></span>
-          <span class="tag-chip"><span id="session-status">未连接</span> · Gen <span id="generation">-</span></span>
+          <div class="session-title-row">
+            <strong id="active-session" class="session-title">未选择会话</strong>
+            <span id="active-project-tag" class="tag-chip" hidden></span>
+            <span id="active-claude-tag" class="tag-chip" hidden></span>
+            <span id="session-status" class="status-chip" data-status="">未选择</span>
+          </div>
+          <div class="session-meta-row">
+            <span>Gen <strong id="generation">-</strong></span>
+            <span class="run-meta">
+              <span>Run</span>
+              <strong id="run-id" class="run-id">无</strong>
+              <button id="copy-run-id" type="button" class="icon-btn secondary compact" hidden aria-label="复制 Run ID">
+                <svg class="icon" aria-hidden="true"><use href="#i-copy"></use></svg>
+              </button>
+              <span id="run-status" class="status-chip" hidden></span>
+            </span>
+          </div>
         </div>
         <div class="row">
-          <button id="rename-toggle" type="button" class="secondary compact" disabled>✏️ 重命名</button>
-          <button id="fork-session" type="button" class="secondary compact" disabled>🌿 分叉</button>
-          <button id="export-session" type="button" class="secondary compact" disabled>📥 导出</button>
-          <button id="cancel" type="button" class="secondary compact" disabled>取消运行</button>
+          <button id="rename-toggle" type="button" class="secondary compact" disabled aria-label="重命名会话">
+            <svg class="icon" aria-hidden="true"><use href="#i-pencil"></use></svg>
+            重命名
+          </button>
+          <button id="fork-session" type="button" class="secondary compact" disabled aria-label="分叉会话">
+            <svg class="icon" aria-hidden="true"><use href="#i-branch"></use></svg>
+            分叉
+          </button>
+          <button id="export-session" type="button" class="secondary compact" disabled aria-label="导出会话">
+            <svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg>
+            导出
+          </button>
+          <button id="cancel" type="button" class="secondary compact" hidden disabled aria-label="取消运行">取消运行</button>
           <button id="disconnect" type="button" class="secondary compact" disabled>断开</button>
           <button id="reconnect" type="button" class="secondary compact" disabled>重连</button>
         </div>
@@ -484,10 +729,10 @@
 
       <div id="transcript" class="transcript">
         <div id="empty-state" class="empty-guide">
-          <h3>🚀 欢迎使用 BastionCC（棱堡）桌面工作台</h3>
+          <h3>欢迎使用 BastionCC（棱堡）桌面工作台</h3>
           <ol>
-            <li>点击上方 <strong>⚡ 一键本地服务</strong> 快速体验，或展开 <strong>远程 VPS 连接设置</strong> 连入美西服务器。</li>
-            <li>左侧选择项目目录并点击 <strong>+ 新建</strong> 创建会话（自动关联服务器原生 `claude --resume` 上下文）。</li>
+            <li>点击上方 <strong>一键本地服务</strong> 快速体验，或展开 <strong>连接设置</strong> 连入服务器。</li>
+            <li>左侧点击 <strong>新建</strong>，选择项目目录并创建会话（自动关联服务器原生 `claude --resume` 上下文）。</li>
             <li>在下方输入指令，按 <strong>Enter 发送</strong>（支持中文输入法防误触），<strong>Shift + Enter 换行</strong>。</li>
           </ol>
         </div>
@@ -496,42 +741,61 @@
       <form id="run-form" class="composer-card">
         <label for="prompt-input" class="sr-only">任务指令</label>
         <textarea id="prompt-input" name="prompt" placeholder="输入任务指令（Enter 发送 · Shift+Enter 换行 · 自动按会话保存草稿）" required></textarea>
-        <div class="row" style="justify-content:space-between">
-          <div class="row composer-controls">
-            <label>审批
-              <select id="approval-mode" name="approvalMode">
-                <option value="manual">手动审批</option>
-                <option value="auto-edit">自动改文件</option>
-                <option value="plan-only">仅生成计划</option>
-              </select>
-            </label>
-            <label>推理
-              <select id="reasoning-effort" name="reasoningEffort">
-                <option value="low">低 (快速)</option>
-                <option value="medium" selected>中 (标准)</option>
-                <option value="high">高 (深度)</option>
-                <option value="max">极限</option>
-              </select>
-            </label>
-            <label>账号仓
-              <select id="account-profile" name="accountProfile">
-                <option value="">默认账号</option>
-                <option value="pro-1">pro-1</option>
-                <option value="pro-2">pro-2</option>
-              </select>
-            </label>
-            <label><input type="checkbox" name="execute" checked> 直接执行</label>
-          </div>
-          <div class="row">
-            <button id="retry-last" type="button" class="secondary compact" hidden>🔄 重发上一条</button>
+        <div class="composer-footer">
+          <details id="run-options" class="run-options">
+            <summary>
+              <svg class="icon" aria-hidden="true"><use href="#i-sliders"></use></svg>
+              运行选项
+            </summary>
+            <div class="row composer-controls">
+              <label>审批模式
+                <select id="approval-mode" name="approvalMode">
+                  <option value="manual">手动审批</option>
+                  <option value="auto-edit">自动改文件</option>
+                  <option value="plan-only">仅生成计划</option>
+                </select>
+              </label>
+              <label>推理强度
+                <select id="reasoning-effort" name="reasoningEffort">
+                  <option value="low">低 (快速)</option>
+                  <option value="medium" selected>中 (标准)</option>
+                  <option value="high">高 (深度)</option>
+                  <option value="max">极限</option>
+                </select>
+              </label>
+              <label>账号隔离仓
+                <select id="account-profile" name="accountProfile">
+                  <option value="">默认账号</option>
+                  <option value="pro-1">pro-1</option>
+                  <option value="pro-2">pro-2</option>
+                </select>
+              </label>
+              <label><input type="checkbox" name="execute" checked> 直接由服务端执行</label>
+            </div>
+          </details>
+          <div class="row composer-actions">
+            <button id="retry-last" type="button" class="secondary compact" hidden aria-label="重发上一条">
+              <svg class="icon" aria-hidden="true"><use href="#i-refresh"></use></svg>
+              重发上一条
+            </button>
             <button id="start-run" type="submit" disabled>发送执行</button>
           </div>
         </div>
       </form>
-      <p id="notice" class="notice" hidden></p>
+      <p id="notice" class="notice" aria-live="polite" aria-atomic="true"></p>
       <pre id="error" role="alert"></pre>
     </section>
   </main>
+  <dialog id="confirm-dialog" aria-labelledby="confirm-title">
+    <form method="dialog" class="confirm-form">
+      <h3 id="confirm-title">确认操作</h3>
+      <p id="confirm-message"></p>
+      <div class="row confirm-actions" style="justify-content:flex-end">
+        <button id="confirm-dismiss" type="submit" class="secondary" value="cancel">返回</button>
+        <button id="confirm-accept" type="submit" class="danger" value="confirm">确认</button>
+      </div>
+    </form>
+  </dialog>
   <script type="module" src="./renderer.js"></script>
 </body>
 </html>

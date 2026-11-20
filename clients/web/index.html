@@ -8,57 +8,170 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-search" viewBox="0 0 16 16">
+      <circle cx="7" cy="7" r="4.2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M10.4 10.4 13.5 13.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-refresh" viewBox="0 0 16 16">
+      <path d="M13.2 8a5.2 5.2 0 1 1-1.4-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M11.6 2.4v2.7H8.9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-plus" viewBox="0 0 16 16">
+      <path d="M8 3.2v9.6M3.2 8h9.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-trash" viewBox="0 0 16 16">
+      <path d="M3.2 4.6h9.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M6.3 4.5V3.2h3.4v1.3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M4.4 4.6l.6 8.1h6l.6-8.1" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-history" viewBox="0 0 16 16">
+      <path d="M3.2 8a4.8 4.8 0 1 0 1.2-3.2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M3 3.2v2.4h2.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M8 5.6V8.2l1.8 1.2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-pencil" viewBox="0 0 16 16">
+      <path d="M9.4 3.1 12.9 6.6 6.2 13.3H2.7V9.8z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-branch" viewBox="0 0 16 16">
+      <circle cx="4.2" cy="3.4" r="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <circle cx="4.2" cy="12.6" r="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <circle cx="11.8" cy="6.4" r="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M4.2 4.9v6.2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M4.2 8.1c.2-1.5 2.1-1.7 6.1-1.7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-download" viewBox="0 0 16 16">
+      <path d="M8 2.4v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M5.2 7.1 8 9.9l2.8-2.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M3.2 13.2h9.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-copy" viewBox="0 0 16 16">
+      <rect x="5.6" y="5.6" width="7" height="7.2" rx="1.1" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M10.4 5.6V3.7a1 1 0 0 0-1-1H3.6a1 1 0 0 0-1 1v5.8a1 1 0 0 0 1 1h2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-plug" viewBox="0 0 16 16">
+      <path d="M6 2.2v3.1M10 2.2v3.1" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M4.4 5.3h7.2v2.2a3.6 3.6 0 0 1-7.2 0z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+      <path d="M8 11.1v2.7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-folder" viewBox="0 0 16 16">
+      <path d="M2.4 5.1V12.4h11.2V6.2H8.1L6.7 4.4H2.4v.7z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-sliders" viewBox="0 0 16 16">
+      <path d="M2.8 4.4h10.4M2.8 8h10.4M2.8 11.6h10.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <circle cx="6" cy="4.4" r="1.35" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <circle cx="10.2" cy="8" r="1.35" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <circle cx="7.2" cy="11.6" r="1.35" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    </symbol>
+    <symbol id="i-device" viewBox="0 0 16 16">
+      <rect x="5" y="2.2" width="6" height="11.6" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M7.2 12.4h1.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-sun" viewBox="0 0 16 16">
+      <circle cx="8" cy="8" r="2.3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M8 1.7v1.7M8 12.6v1.7M1.7 8h1.7M12.6 8h1.7M3.5 3.5l1.2 1.2M11.3 11.3l1.2 1.2M12.5 3.5l-1.2 1.2M4.7 11.3l-1.2 1.2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-moon" viewBox="0 0 16 16">
+      <path d="M10.3 2.3A5.5 5.5 0 1 0 13.8 10 4.3 4.3 0 0 1 10.3 2.3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    </symbol>
+  </svg>
+
   <header class="topbar">
     <div class="brand">
       <h1>BastionCC · 棱堡</h1>
       <span class="subtitle">远程会话控制、原生 CLI 续接与实时状态工作台</span>
-      <span id="metrics-pill" class="metrics-pill">📊 会话 0 · 轮次 0 · ~0 Tokens · 缓存命中 0%</span>
     </div>
-    <div class="connect-group">
-      <form id="connect-form" class="connect-bar">
-        <label>服务器地址 <input id="connect-base" name="base" value="" placeholder="留空默认同源或 http://127.0.0.1:8787"></label>
-        <label>访问令牌 <input id="connect-token" name="token" type="password" autocomplete="off" placeholder="本机回环可选"></label>
-        <label>TOTP <input id="connect-totp" name="totp" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="6位动态码"></label>
-        <button type="submit">连接</button>
-        <button id="pair-login-toggle" type="button" class="secondary">6位码登录</button>
-      </form>
-      <form id="pair-login-form" class="pair-login-bar" hidden>
-        <label for="pair-code-input">6位配对码（单次有效）</label>
-        <input id="pair-code-input" name="code" type="text" inputmode="numeric" autocomplete="one-time-code" pattern="\d{6}" maxlength="6" placeholder="000000" required>
-        <button type="submit">兑换并连接</button>
-      </form>
+    <div class="top-meta">
+      <span id="metrics-pill" class="metrics-pill">会话 0 · 轮次 0 · ~0 Tokens · 缓存命中 0%</span>
+      <span id="connection-status" class="status-pill" data-state="offline" role="status">未连接</span>
+      <button id="theme-toggle" type="button" class="secondary compact" aria-label="切换深色主题" title="切换深色主题">
+        <svg class="icon theme-icon theme-icon-sun" aria-hidden="true"><use href="#i-sun"></use></svg>
+        <svg class="icon theme-icon theme-icon-moon" aria-hidden="true"><use href="#i-moon"></use></svg>
+        <span class="btn-label">浅色</span>
+      </button>
+      <button id="connect-toggle" type="button" class="secondary compact" aria-expanded="true" aria-controls="connect-drawer">
+        <svg class="icon" aria-hidden="true"><use href="#i-plug"></use></svg>
+        连接设置
+      </button>
     </div>
   </header>
+
+  <div id="connect-drawer" class="connect-drawer">
+    <form id="connect-form" class="connect-bar">
+      <label for="connect-base">服务器地址
+        <input id="connect-base" name="base" value="" placeholder="留空默认同源或 http://127.0.0.1:8787" spellcheck="false">
+      </label>
+      <label for="connect-token">访问令牌
+        <input id="connect-token" name="token" type="password" autocomplete="off" spellcheck="false" placeholder="本机回环可选">
+      </label>
+      <label for="connect-totp">TOTP
+        <input id="connect-totp" name="totp" type="text" inputmode="numeric" autocomplete="one-time-code" spellcheck="false" maxlength="6" placeholder="6位动态码">
+      </label>
+      <button type="submit">连接</button>
+      <button id="pair-login-toggle" type="button" class="secondary" aria-expanded="false" aria-controls="pair-login-form">6位码登录</button>
+    </form>
+    <form id="pair-login-form" class="pair-login-bar" hidden>
+      <label for="pair-code-input">6位配对码（单次有效）</label>
+      <input id="pair-code-input" name="code" type="text" inputmode="numeric" autocomplete="one-time-code" spellcheck="false" pattern="\d{6}" maxlength="6" placeholder="000000" required>
+      <button type="submit">兑换并连接</button>
+    </form>
+  </div>
 
   <main class="layout">
     <aside class="panel sidebar">
       <div class="panel-header">
         <h2>项目与会话</h2>
-        <button id="reload-sessions" type="button" class="secondary">刷新</button>
+        <div class="panel-header-actions">
+          <button id="new-session-toggle" type="button" class="compact" aria-expanded="false" aria-controls="new-session-form">
+            <svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg>
+            新建
+          </button>
+          <button id="reload-sessions" type="button" class="secondary compact" aria-label="刷新会话列表">
+            <svg class="icon" aria-hidden="true"><use href="#i-refresh"></use></svg>
+            刷新
+          </button>
+        </div>
       </div>
-      <input id="session-search" type="search" placeholder="🔍 搜索会话 / 项目...">
-      <form id="new-session-form" class="stack-form">
-        <input id="project-input" name="project" placeholder="所属项目名 / 目录 (可选)">
+      <div class="search-field">
+        <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+        <input id="session-search" type="search" placeholder="搜索会话 / 项目…" aria-label="搜索会话或项目" autocomplete="off">
+      </div>
+      <form id="new-session-form" class="stack-form" hidden>
+        <label class="sr-only" for="project-input">所属项目</label>
+        <input id="project-input" name="project" placeholder="所属项目名 / 目录 (可选)" autocomplete="off">
         <div class="inline-form">
-          <input id="session-input" name="session" placeholder="会话名 / ID (留空自动生成)">
-          <button type="submit">+ 新建</button>
+          <label class="sr-only" for="session-input">会话名</label>
+          <input id="session-input" name="session" placeholder="会话名 / ID (留空自动生成)" autocomplete="off">
+          <button type="submit">创建</button>
         </div>
       </form>
-      <div id="session-groups"></div>
+      <div id="session-groups" class="session-groups"></div>
       <div class="sidebar-actions">
-        <button id="delete-session" type="button" class="danger" disabled>🗑️ 删除会话</button>
-        <button id="compact-sessions" type="button" class="secondary">🧹 压缩历史</button>
+        <button id="delete-session" type="button" class="danger-quiet" disabled aria-label="删除会话">
+          <svg class="icon" aria-hidden="true"><use href="#i-trash"></use></svg>
+          删除会话
+        </button>
+        <button id="compact-sessions" type="button" class="secondary" aria-label="压缩历史">
+          <svg class="icon" aria-hidden="true"><use href="#i-history"></use></svg>
+          压缩历史
+        </button>
       </div>
 
       <details class="devices-drawer">
         <summary>多设备授权管理</summary>
         <form id="enroll-device-form" class="stack-form">
-          <input name="deviceId" placeholder="device-id (如 phone-1)" required>
-          <input name="label" placeholder="设备备注名" required>
-          <input name="scopes" value="control,read" placeholder="control,read,runner" required>
+          <label class="sr-only" for="device-id-input">设备 ID</label>
+          <input id="device-id-input" name="deviceId" placeholder="device-id (如 phone-1)" required autocomplete="off">
+          <label class="sr-only" for="device-label-input">设备备注名</label>
+          <input id="device-label-input" name="label" placeholder="设备备注名" required autocomplete="off">
+          <label class="sr-only" for="device-scopes-input">权限范围</label>
+          <input id="device-scopes-input" name="scopes" value="control,read" placeholder="control,read,runner" required autocomplete="off" spellcheck="false">
           <div class="inline-form">
             <button type="submit">签发令牌</button>
-            <button id="pair-code-btn" type="button" class="secondary">📱 生成6位配对码</button>
+            <button id="pair-code-btn" type="button" class="secondary">
+              <svg class="icon" aria-hidden="true"><use href="#i-device"></use></svg>
+              生成6位配对码
+            </button>
           </div>
         </form>
         <pre id="enrolled-credential" class="credential-box" hidden></pre>
@@ -68,27 +181,53 @@
 
     <section class="panel workspace">
       <div class="status-bar">
-        <div>
-          会话: <strong id="active-session">未选择</strong>
-          <span id="active-project-tag" class="session-badge"></span>
-          <span id="active-claude-tag" class="session-badge"></span>
-          · 状态: <strong id="session-status">未连接</strong>
-          · Gen: <strong id="generation">-</strong>
-          · Run: <strong id="run-id">无</strong>
+        <div class="session-heading">
+          <div class="session-title-row">
+            <strong id="active-session" class="session-title">未选择</strong>
+            <span id="active-project-tag" class="session-badge" hidden></span>
+            <span id="active-claude-tag" class="session-badge" hidden></span>
+            <span id="session-status" class="status-chip" data-status="">未选择</span>
+          </div>
+          <div class="session-meta-row">
+            <span class="meta-item">Gen <strong id="generation">-</strong></span>
+            <span class="meta-item run-meta">
+              <span class="meta-label">Run</span>
+              <strong id="run-id" class="run-id">无</strong>
+              <button id="copy-run-id" type="button" class="icon-btn secondary" hidden aria-label="复制 Run ID">
+                <svg class="icon" aria-hidden="true"><use href="#i-copy"></use></svg>
+              </button>
+              <span id="run-status" class="status-chip" hidden></span>
+            </span>
+          </div>
         </div>
         <div class="actions">
-          <button id="rename-toggle" type="button" class="secondary" disabled>✏️ 重命名</button>
-          <button id="fork-session" type="button" class="secondary" disabled>🌿 分叉</button>
-          <button id="export-session" type="button" class="secondary" disabled>📥 导出</button>
-          <button id="cancel" type="button" disabled>取消</button>
-          <button id="disconnect" type="button" class="secondary" disabled>断开</button>
-          <button id="reconnect" type="button" class="secondary" disabled>重连</button>
+          <div class="action-group" role="group" aria-label="会话操作">
+            <button id="rename-toggle" type="button" class="secondary compact" disabled aria-label="重命名会话">
+              <svg class="icon" aria-hidden="true"><use href="#i-pencil"></use></svg>
+              重命名
+            </button>
+            <button id="fork-session" type="button" class="secondary compact" disabled aria-label="分叉会话">
+              <svg class="icon" aria-hidden="true"><use href="#i-branch"></use></svg>
+              分叉
+            </button>
+            <button id="export-session" type="button" class="secondary compact" disabled aria-label="导出会话">
+              <svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg>
+              导出
+            </button>
+          </div>
+          <div class="action-group" role="group" aria-label="连接与运行">
+            <button id="cancel" type="button" class="secondary compact" hidden disabled aria-label="取消运行">取消</button>
+            <button id="disconnect" type="button" class="secondary compact" disabled>断开</button>
+            <button id="reconnect" type="button" class="secondary compact" disabled>重连</button>
+          </div>
         </div>
       </div>
 
       <form id="rename-bar" class="inline-edit" hidden>
-        <input id="rename-title-input" placeholder="会话标题">
-        <input id="rename-project-input" placeholder="所属项目">
+        <label class="sr-only" for="rename-title-input">会话标题</label>
+        <input id="rename-title-input" placeholder="会话标题" autocomplete="off">
+        <label class="sr-only" for="rename-project-input">所属项目</label>
+        <input id="rename-project-input" placeholder="所属项目" autocomplete="off">
         <button type="submit">保存</button>
         <button id="rename-cancel" type="button" class="secondary">取消</button>
       </form>
@@ -103,10 +242,10 @@
 
       <div id="transcript-view" class="transcript">
         <div id="empty-state" class="empty-guide">
-          <h3>🚀 欢迎使用 BastionCC（棱堡）网页控制台</h3>
+          <h3>欢迎使用 BastionCC（棱堡）网页控制台</h3>
           <ol>
-            <li>右上角填入服务器地址与访问令牌点击 <strong>连接</strong>（本机同源访问自动连入）。</li>
-            <li>左侧填写项目并点击 <strong>+ 新建</strong>，或展开多设备授权签发 <strong>6位配对码</strong>。</li>
+            <li>点击右上角 <strong>连接设置</strong>，填入服务器地址与访问令牌后点击 <strong>连接</strong>（本机同源访问会自动连入）。</li>
+            <li>左侧点击 <strong>新建</strong> 填写项目与会话，或展开多设备授权签发 <strong>6位配对码</strong>。</li>
             <li>下方输入框支持 <strong>Enter 发送</strong>（中文输入法选词按 Enter 防误触）与 <strong>Shift+Enter 换行</strong>。</li>
           </ol>
         </div>
@@ -116,39 +255,48 @@
         <label for="prompt-input" class="sr-only">任务指令</label>
         <textarea id="prompt-input" name="prompt" placeholder="输入指令（Enter 发送 · Shift+Enter 换行 · 正文加密存库不进事件流）" required></textarea>
         <div class="composer-footer">
-          <div class="composer-options">
-            <label>审批模式
-              <select id="approval-mode" name="approvalMode">
-                <option value="manual">手动审批</option>
-                <option value="auto-edit">自动改文件</option>
-                <option value="plan-only">仅生成计划</option>
-              </select>
-            </label>
-            <label>推理强度
-              <select id="reasoning-effort" name="reasoningEffort">
-                <option value="low">低 (快速)</option>
-                <option value="medium" selected>中 (标准)</option>
-                <option value="high">高 (深度)</option>
-                <option value="max">极限</option>
-              </select>
-            </label>
-            <label>账号隔离仓
-              <select id="account-profile" name="accountProfile">
-                <option value="">默认账号</option>
-                <option value="pro-1">pro-1</option>
-                <option value="pro-2">pro-2</option>
-              </select>
-            </label>
-            <label class="checkbox-label"><input type="checkbox" name="execute" checked> 直接由服务端执行</label>
-          </div>
+          <details id="run-options" class="run-options">
+            <summary>
+              <svg class="icon" aria-hidden="true"><use href="#i-sliders"></use></svg>
+              运行选项
+            </summary>
+            <div class="composer-options">
+              <label>审批模式
+                <select id="approval-mode" name="approvalMode">
+                  <option value="manual">手动审批</option>
+                  <option value="auto-edit">自动改文件</option>
+                  <option value="plan-only">仅生成计划</option>
+                </select>
+              </label>
+              <label>推理强度
+                <select id="reasoning-effort" name="reasoningEffort">
+                  <option value="low">低 (快速)</option>
+                  <option value="medium" selected>中 (标准)</option>
+                  <option value="high">高 (深度)</option>
+                  <option value="max">极限</option>
+                </select>
+              </label>
+              <label>账号隔离仓
+                <select id="account-profile" name="accountProfile">
+                  <option value="">默认账号</option>
+                  <option value="pro-1">pro-1</option>
+                  <option value="pro-2">pro-2</option>
+                </select>
+              </label>
+              <label class="checkbox-label"><input type="checkbox" name="execute" checked> 直接由服务端执行</label>
+            </div>
+          </details>
           <div class="composer-actions">
-            <button id="retry-last" type="button" class="secondary" hidden>🔄 重发上一条</button>
+            <button id="retry-last" type="button" class="secondary" hidden aria-label="重发上一条">
+              <svg class="icon" aria-hidden="true"><use href="#i-refresh"></use></svg>
+              重发上一条
+            </button>
             <button id="load-transcript" type="button" class="secondary" disabled>刷新正文</button>
             <button type="submit" id="start-run-btn" disabled>发送执行</button>
           </div>
         </div>
       </form>
-      <p id="notice" class="notice" hidden></p>
+      <p id="notice" class="notice" aria-live="polite" aria-atomic="true"></p>
       <pre id="error" role="alert"></pre>
     </section>
 
@@ -156,13 +304,24 @@
       <div class="panel-header">
         <h2>事件时间线</h2>
         <div class="stream-controls">
-          <button id="refresh" type="button" class="secondary" disabled>拉取</button>
-          <button id="toggle-stream" type="button" class="secondary" disabled>SSE 实时</button>
+          <button id="refresh" type="button" class="secondary compact" disabled>拉取</button>
+          <button id="toggle-stream" type="button" class="secondary compact" disabled>SSE 实时</button>
         </div>
       </div>
-      <ol id="events" class="event-list"></ol>
+      <ol id="events" class="event-list" aria-label="事件时间线"></ol>
     </aside>
   </main>
+
+  <dialog id="confirm-dialog" aria-labelledby="confirm-title">
+    <form method="dialog" class="confirm-form">
+      <h3 id="confirm-title">确认操作</h3>
+      <p id="confirm-message"></p>
+      <div class="confirm-actions">
+        <button id="confirm-dismiss" type="submit" class="secondary" value="cancel">返回</button>
+        <button id="confirm-accept" type="submit" class="danger" value="confirm">确认</button>
+      </div>
+    </form>
+  </dialog>
 
   <script type="module" src="./app.js"></script>
 </body>
